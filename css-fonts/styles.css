@@ -1,0 +1,10 @@
+h1,
+h2 {
+font-family: 'Kavivanar', cursive;
+}
+
+p {
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  line-height: 1.7em;
+}
