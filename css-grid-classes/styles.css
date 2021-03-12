@@ -1,0 +1,28 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-one-fourth {
+  flex-basis: 25%;
+}
+
+.column-three-fourths {
+  flex-basis: 75%;
+}
+
+.column-two-thirds {
+  flex-basis: 75%;
+}
+
+img {
+  width: 100%;
+}
