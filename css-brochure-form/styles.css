@@ -1,0 +1,77 @@
+h4 {
+  color: rgb(235, 98, 83);
+  text-align: center;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+label {
+  text-indent: 13px;
+  display: block;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+#submit {
+  color: white;
+  background-color: rgb(235, 98, 83);
+  width: 85px;
+  height: 30px;
+  border-radius: 5rem;
+  border-color: rgb(235, 98, 83);
+  display: block;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 0;
+  align-self: flex-end;
+}
+
+#how-many {
+  background-color: rgb(241, 241, 241);
+}
+
+input,
+select {
+  width: 355px;
+  height: 35px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+select {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+input {
+  padding-left: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+input::placeholder {
+  color: rgb(158, 156, 156);
+  font-family: 'AtlasGrotesk', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
