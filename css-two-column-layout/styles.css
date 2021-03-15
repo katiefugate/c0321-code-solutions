@@ -16,8 +16,8 @@ h1 {
 
 .head {
   text-align: center;
-  padding-left: 225px;
-  padding-right: 225px;
+  margin: auto;
+  width: 575px;
   padding-bottom: 45px;
 }
 
@@ -62,8 +62,10 @@ button {
   box-sizing: border-box;
   padding: 7px 35px;
   border: 2px solid rgb(218, 104, 62);
-  position: relative;
-  left: 400px;
+}
+
+.button-row {
+  text-align: center;
 }
 
 img {
