@@ -4,7 +4,7 @@ h2 {
 }
 
 h1 {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 h2 {
@@ -30,8 +30,8 @@ p {
   flex-direction: column;
   flex-basis: 25%;
   text-align: center;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 .header {
