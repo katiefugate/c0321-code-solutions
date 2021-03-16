@@ -39,17 +39,9 @@ p {
 }
 
 .container {
-  /* display: flex;
-  flex-direction: column; */
   background-color: rgba(248, 248, 252, 0.966);
   padding-left: 30px;
   padding-right: 30px;
-
-  /* margin-left: 50px;
-  margin-right: 50px; */
-
-
-  /* align-self: center; */
 }
 
 .icon {
