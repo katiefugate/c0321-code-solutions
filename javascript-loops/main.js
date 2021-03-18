@@ -55,7 +55,6 @@ function getKeys(object) {
   var keys = [];
   var i;
   for (i in object) {
-    object.i = object[i];
     keys.push(i);
   }
   return keys;
