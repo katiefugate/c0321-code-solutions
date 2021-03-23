@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+}
+
+.open {
+  background-color: rgb(71, 55, 223);
+  color: white;
+  padding: 5px 25px;
+  border: 1px solid rgb(71, 55, 223);
+  border-radius: 5px;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  box-shadow: 0 2px 2px rgb(115, 130, 145);
+}
+
+.modal {
+  border: 1px solid rgba(0, 0, 0, 0.795);
+  border-radius: 5px;
+  padding: 20px 50px;
+  text-align: center;
+}
+
+.noButton {
+  width: 85px;
+  padding: 5px 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+  background-color: rgb(238, 83, 66);
+  border: 1px solid rgb(238, 83, 66);
+  border-radius: 4px;
+  font-size: 20px;
+  box-shadow: 0 1px 3px 0.5px rgb(115, 130, 145);
+}
+
+p {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+.modalContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContainer.isOpen {
+  background-color: rgba(0, 0, 0, 0.795);
+}
+
+.noButton:focus,
+.open:focus {
+  outline: none;
+}
