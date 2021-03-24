@@ -1,23 +1,34 @@
 // var parent = document.querySelector('.container')
 // var letters = document.querySelectorAll('span');
 
-// function idk() {
+// var typedLetter;
+// function eachLetter(currentValue) {
+//   typedLetter = currentValue.key;
+//   // console.log(typedLetter);
+//   idk(typedLetter);
+// }
+// var currentLetter;
+
+// function idk(currentValue) {
 //   var i = 0;
-//   while (i < letters.length) {
-//     var currentLetter = letters[i].textContent;
-//     if (currentLetter === eachLetter()){
+//   // console.log(currentValue);
+//   // console.log(letters[0].className)
+//   while (i < letters.length - 1) {
+//     currentLetter = letters[i].textContent;
+//     if (currentLetter === currentValue){
+//       letters[i].className = 'correct';
+//       console.log(letters[i].className)
 //     }
-//     if (currentLetter.className === 'correct') {
+//     else if (letters[i].className === 'correct') {
 //       i++
 //     }
+//     else if (currentLetter !== currentValue) {
+//       letters[i].className = 'incorrect';
+//     }
 //   }
+
 // }
 
-// function eachLetter(currentValue) {
-//   var typedLetter = currentValue.key;
-//   console.log(typedLetter);
-//   return typedLetter;
-//   }
 // document.addEventListener('keydown', eachLetter);
 
 // letters.forEach(eachLetter);
