@@ -1,16 +1,16 @@
 var openButton = document.querySelector('.open');
 var modal = document.querySelector('.modal');
 var noButton = document.querySelector('.noButton');
-var modalContainer = document.querySelector('.modalContainer');
+var body = document.querySelector('body');
 
 function openModal(event) {
-  modal.setAttribute('open', '');
-  modalContainer.className = 'modalContainer isOpen';
+  modal.className = 'modal';
+  body.className = 'isOpen';
 }
 
 function closeButton(event) {
-  modal.removeAttribute('open', '');
-  modalContainer.className = 'modalContainer';
+  modal.className = 'modal hidden';
+  body.className = '';
 }
 
 openButton.addEventListener('click', openModal);

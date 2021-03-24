@@ -6,10 +6,8 @@ body {
   background-color: rgb(71, 55, 223);
   color: white;
   padding: 5px 25px;
-  border: 1px solid rgb(71, 55, 223);
   border-radius: 5px;
   font-size: 20px;
-  position: absolute;
   margin-top: 10px;
   margin-left: 10px;
   box-shadow: 0 2px 2px rgb(115, 130, 145);
@@ -20,6 +18,12 @@ body {
   border-radius: 5px;
   padding: 20px 50px;
   text-align: center;
+  position: absolute;
+  left: 50vh;
+  right: 50vh;
+  top: 150px;
+  height: 200px;
+  background-color: white;
 }
 
 .noButton {
@@ -43,16 +47,22 @@ p {
 
 .modalContainer {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.modalContainer.isOpen {
+body.isOpen {
   background-color: rgba(0, 0, 0, 0.795);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .noButton:focus,
 .open:focus {
   outline: none;
+}
+
+.modal.hidden {
+  display: none;
 }
