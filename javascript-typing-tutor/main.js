@@ -4,17 +4,14 @@
 // var typedLetter;
 // function eachLetter(currentValue) {
 //   typedLetter = currentValue.key;
-//   console.log('space', currentValue);
 //   idk(typedLetter);
 // }
-// var currentLetter;
+
 // var t = 0;
 // function idk(letter) {
-//   console.log('letter', letter)
-//   console.log('letters[t]', letters[t])
-//   if(letter === '&nbsp;') {
-//     letter = ' ';
-//   }
+
+//   letters[t].className = 'current';
+//   console.log(letters[t], letters[t].className)
 //   if(letter === letters[t].textContent) {
 //     letters[t].className = 'correct';
 //     t++;
