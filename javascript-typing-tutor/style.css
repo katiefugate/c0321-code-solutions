@@ -22,3 +22,9 @@ span {
   color: red;
   text-decoration: underline;
 }
+
+#space1,
+#space2,
+#space3 {
+  padding-left: 20px;
+}
