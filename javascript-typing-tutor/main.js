@@ -8,12 +8,13 @@
 // }
 
 // var t = 0;
+// letters[0].className = 'current'
 // function idk(letter) {
 
-//   letters[t].className = 'current';
 //   console.log(letters[t], letters[t].className)
-//   if(letter === letters[t].textContent) {
+//   if(letter === letters[t].textContent && ) {
 //     letters[t].className = 'correct';
+//     letters[t + 1].className = 'current';
 //     t++;
 //   }
 //     else {

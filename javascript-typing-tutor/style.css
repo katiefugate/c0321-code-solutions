@@ -7,16 +7,18 @@
 
 span {
   font-size: 50px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: monospace;
 }
 
 .current {
   color: blue;
-  text-decoration: underline;
+  box-sizing: border-box;
+  padding-top: 4px;
+  border-bottom: 4px solid blue;
 }
 
 .correct {
-  color: green;
+  color: rgb(8, 185, 8);
 }
 
 .incorrect {
@@ -28,4 +30,11 @@ span {
 #space2,
 #space3 {
   padding-left: 20px;
+}
+
+#space1.current,
+#space2.current,
+#space3.current {
+  margin-top: 57px;
+  border-bottom: 4px solid blue;
 }
