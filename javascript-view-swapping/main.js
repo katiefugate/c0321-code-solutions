@@ -12,9 +12,6 @@ function clickHandler(event) {
       }
     }
   }
-  if (event.target.className !== 'tab active') {
-    return;
-  }
 
   var view = event.target.dataset.view;
 
