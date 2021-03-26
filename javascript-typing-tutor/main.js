@@ -32,12 +32,12 @@
 //     var correct = typeCount - incorrect;
 //     var percent = (correct / typeCount) * 100;
 //     percent = Math.round(percent);
-//     var body = document.querySelector('body');
+//     var popUpContainer = document.querySelector('.popUpContainer');
 //     var popUp = document.createElement('div');
 //     var percentCorrect = document.createElement('p');
 //     var again = document.createElement('p');
 //     var yesButton = document.createElement('button');
-//     body.appendChild(popUp);
+//     popUpContainer.appendChild(popUp);
 //     popUp.appendChild(percentCorrect);
 //     popUp.appendChild(again);
 //     popUp.appendChild(yesButton);

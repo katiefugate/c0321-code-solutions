@@ -47,12 +47,12 @@ span {
   padding: 20px 50px;
   text-align: center;
   position: absolute;
-  left: 50vh;
+  left: 25vh;
 
   /* right: 50vh; */
   top: 150px;
   height: 200px;
-  width: 300px;
+  width: 50%;
 }
 
 button {
@@ -74,4 +74,8 @@ button {
 .percent {
   margin-bottom: 30px;
   color: rgb(117, 116, 116);
+}
+
+.popUpContainer {
+  width: 100%;
 }
