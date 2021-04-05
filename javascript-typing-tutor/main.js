@@ -1,6 +1,10 @@
 var letters = document.querySelectorAll('span');
 var typedLetter;
 var typeCount = 0;
+var t = 0;
+var incorrect = 0;
+letters[0].className = 'current';
+
 function eachLetter(currentValue) {
   typedLetter = currentValue.key;
   typeThis(typedLetter);
@@ -8,9 +12,6 @@ function eachLetter(currentValue) {
   percentage();
 }
 
-var t = 0;
-var incorrect = 0;
-letters[0].className = 'current';
 function typeThis(letter) {
   if (letter === letters[t].textContent) {
     letters[t].className = 'correct';
@@ -21,12 +22,14 @@ function typeThis(letter) {
     incorrect++;
   }
 }
+var popUpContainer;
+
 function percentage() {
   if (t === letters.length - 1) {
     var correct = typeCount - incorrect;
     var percent = (correct / typeCount) * 100;
     percent = Math.round(percent);
-    var popUpContainer = document.createElement('div');
+    popUpContainer = document.createElement('div');
     var popUp = document.createElement('div');
     var percentCorrect = document.createElement('p');
     var again = document.createElement('p');
@@ -50,7 +53,12 @@ function percentage() {
 }
 
 function clickHandler(event) {
-  location.reload();
+  popUpContainer.className = 'popUp hidden';
+  letters[0].className = 'current';
+  for (var k = 1; k < letters.length; k++) {
+    letters[k].className = 'reset';
+  }
+  t = 0;
 }
 
 document.addEventListener('keydown', eachLetter);

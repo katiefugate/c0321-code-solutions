@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .container {
   display: flex;
   min-height: 100vh;
@@ -37,6 +41,13 @@ span {
 #space3.current {
   margin-top: 57px;
   border-bottom: 4px solid blue;
+}
+
+#space1.incorrect,
+#space2.incorrect,
+#space3.incorrect {
+  margin-top: 57px;
+  border-bottom: 4px solid red;
 }
 
 .popUp {
@@ -81,4 +92,8 @@ button {
 
 .popUpContainer {
   width: 100%;
+}
+
+.reset {
+  color: black;
 }
