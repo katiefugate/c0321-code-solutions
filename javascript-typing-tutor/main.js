@@ -56,7 +56,7 @@ function clickHandler(event) {
   popUpContainer.className = 'popUp hidden';
   letters[0].className = 'current';
   for (var k = 1; k < letters.length; k++) {
-    letters[k].className = 'reset';
+    letters[k].className = '';
   }
   t = 0;
 }
