@@ -1,0 +1,52 @@
+
+.hidden {
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img {
+  padding: 0 2rem;
+}
+
+.container2 {
+  border: 4px solid black;
+  position: relative;
+  padding: 2rem 3rem;
+}
+
+.row {
+  position: relative;
+  padding: 0 8rem;
+  display: flex;
+}
+
+.fas.fa-chevron-left {
+  position: absolute;
+  top: 13rem;
+  left: 2rem;
+  font-size: 3rem;
+}
+
+.fas.fa-chevron-right {
+  position: absolute;
+  top: 13rem;
+  right: 2rem;
+  font-size: 3rem;
+}
+
+.circles {
+  position: absolute;
+  left: 14rem;
+  bottom: 1.5rem;
+}
+
+.fa-circle {
+  padding: 0 0.5rem;
+}
