@@ -2,19 +2,14 @@
 
 function reverseWords(string) {
   var strArr = string.split(' ');
-  var tempReverseArr = [];
-  for (var k = 0; k < strArr.length; k++) {
+  var backwords = [];
+  for (var i = 0; i < strArr.length; i++) {
     var temp = [];
-    for (var i = 0; i < strArr[k].length; i++) {
-      temp.unshift(strArr[k][i]);
+    for (var k = strArr[i].length - 1; k >= 0; k--) {
+      temp.push(strArr[i][k]);
+      var backwordsWord = temp.join('');
     }
-    tempReverseArr.push(temp);
+    backwords.push(backwordsWord);
   }
-  var reverseArr = [];
-  for (var m = 0; m < tempReverseArr.length; m++) {
-    var newStr = tempReverseArr[m].join('');
-    reverseArr.push(newStr);
-    var reverse = reverseArr.join(' ');
-  }
-  return reverse;
+  return backwords.join(' ');
 }
