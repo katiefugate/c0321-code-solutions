@@ -6,15 +6,15 @@ function unique(array) {
     newArr.push(array[i]);
   }
   var k = 0;
-  var r = 1;
+  var b = 1;
   while (k < newArr.length) {
-    for (var m = r; m < newArr.length; m++) {
+    for (var m = b; m < newArr.length; m++) {
       if (newArr[k] === newArr[m]) {
         newArr.splice(m, 1);
         m--;
       }
     }
-    r++;
+    b++;
     k++;
   }
   return newArr;
