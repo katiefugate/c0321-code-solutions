@@ -3,12 +3,15 @@
 function isAnagram(firstString, secondString) {
   var firstNoSpace = firstString.replaceAll(' ', '');
   var secondNoSpace = secondString.replaceAll(' ', '');
-  var counter = 0;
+  var firstArr = firstNoSpace.split('');
+  var secondArr = secondNoSpace.split('');
 
-  for (var i = 0; i < secondNoSpace.length; i++) {
-    if (firstNoSpace.includes(secondNoSpace[i])) {
-      counter++;
+  for (var k = 0; k < firstArr.length; k++) {
+    for (var i = 0; i < secondArr.length; i++) {
+      if (firstArr[k] === secondArr[i]) {
+        secondArr.splice(i, 1);
+      }
     }
   }
-  return counter === firstNoSpace.length;
+  return secondArr.length === 0;
 }
