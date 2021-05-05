@@ -27,21 +27,16 @@ app.get('/api/notes/:id', (req, res) => {
   }
 });
 
-let nextId = 10;
-for (const keys in data.notes) {
-  const key = Number(keys);
-  if (key > nextId) {
-    nextId = key + 1;
-  }
-}
+let nextId = data.nextId;
 app.post('/api/notes', (req, res) => {
-  if (Object.keys(req.body).length === 0) {
+  if (typeof req.body.content === 'undefined') {
     res.status(400).json({ error: 'content is a required field' });
   } else {
     const newNote = req.body;
     newNote.id = nextId;
     data.notes[nextId] = newNote;
     nextId++;
+    data.nextId = nextId;
     const newData = JSON.stringify(data, null, 2);
     fs.writeFile('./data.json', newData, 'utf8', err => {
       if (err) {
@@ -79,7 +74,7 @@ app.put('/api/notes/:id', (req, res) => {
     res.status(400).send({ error: 'id must be a positive integer' });
   } else if (!data.notes[req.params.id]) {
     res.status(404).send({ error: 'cannot find note with id ' + paramID });
-  } else if (Object.keys(req.body).length === 0) {
+  } else if (typeof req.body.content === 'undefined') {
     res.status(400).json({ error: 'content is a required field' });
   } else {
     data.notes[req.params.id] = req.body;
