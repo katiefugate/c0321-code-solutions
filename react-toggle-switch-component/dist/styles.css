@@ -1,0 +1,40 @@
+.container-on {
+  background-color: rgb(19, 180, 19);
+  border: 1px solid grey;
+  color: rgb(19, 180, 19);
+  width: 36px;
+  height: 15px;
+  padding: 0;
+  border-radius: 10px;
+  position: relative;
+}
+
+.container-off {
+  background-color: rgb(173, 173, 173);
+  border: 1px solid grey;
+  color: rgb(173, 173, 173);
+  width: 36px;
+  height: 15px;
+  padding: 0;
+  border-radius: 10px;
+  position: relative;
+}
+
+.circle {
+  background-color: white;
+  color: white;
+  margin: 0;
+  border: 0 solid white;
+  border-radius: 10px;
+  position: absolute;
+  width: 18px;
+  height: 15px;
+}
+
+.circle.on {
+  left: 0;
+}
+
+.circle.off {
+  right: 0;
+}
