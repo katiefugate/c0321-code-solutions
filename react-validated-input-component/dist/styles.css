@@ -1,0 +1,35 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fas.fa-check {
+  color: green;
+}
+
+.fas.fa-times,
+.error {
+  color: red;
+}
+
+.fas {
+  padding-left: 5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+input {
+  height: 20px;
+}
+
+.error {
+  font-size: 13px;
+}
+
+label {
+  font-size: 20px;
+  display: block;
+}
+
+.row {
+  display: flex;
+}
