@@ -5,6 +5,7 @@ class Stopwatch extends React.Component {
     super(props);
     this.clickHandler = this.clickHandler.bind(this);
     this.intervalCall = this.intervalCall.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
     this.state = {
       status: false,
       counter: 0
@@ -12,11 +13,11 @@ class Stopwatch extends React.Component {
   }
 
   clickHandler() {
-    let intervalId;
     if (this.state.status === false) {
       this.intervalId = setInterval(this.intervalCall, 1000);
+      this.setState({ status: true });
     } else {
-      clearInterval(intervalId);
+      clearInterval(this.intervalId);
       this.setState(state => {
         return {
           status: false,
@@ -35,6 +36,12 @@ class Stopwatch extends React.Component {
     });
   }
 
+  resetTimer() {
+    if (this.state.status === false) {
+      this.setState({ counter: 0 });
+    }
+  }
+
   render() {
     let icon;
     if (this.state.status === false) {
@@ -44,7 +51,7 @@ class Stopwatch extends React.Component {
     }
     return (
     <div className="container">
-      <div className="num">{this.state.counter}</div>
+      <div className="num" onClick={this.resetTimer}>{this.state.counter}</div>
       <p><i className={icon} onClick={this.clickHandler}></i></p>
     </div>
     );
