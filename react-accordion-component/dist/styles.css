@@ -1,0 +1,12 @@
+.topic {
+  background-color: rgb(185, 185, 185);
+}
+
+.info,
+.topic {
+  width: 450px;
+  border: 2px solid black;
+  margin: 0;
+  padding: 10px 5px;
+  font-family: monospace;
+}
