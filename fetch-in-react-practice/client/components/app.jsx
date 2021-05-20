@@ -50,10 +50,9 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(todo => {
-        this.setState(state => {
-          state.todos.push(todo);
-          return { todos: state.todos };
-        });
+        const copyTodos = this.state.todos.slice();
+        copyTodos.push(todo);
+        this.setState({ todos: copyTodos });
       });
   }
 
@@ -94,10 +93,9 @@ export default class App extends React.Component {
       body: JSON.stringify({ isCompleted: updatedTodoStatus })
     })
       .then(res => {
-        this.setState(state => {
-          state.todos[updateIndex].isCompleted = updatedTodoStatus;
-          return { todos: state.todos };
-        });
+        const copyTodos = this.state.todos.slice();
+        copyTodos[updateIndex].isCompleted = updatedTodoStatus;
+        this.setState({ todos: copyTodos });
       });
 
   }
