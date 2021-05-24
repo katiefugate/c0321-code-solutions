@@ -1,0 +1,51 @@
+USER CAN SIGN UP
+
+When a user provides a username and password on the sign up page and submits the
+form, the onClick prop of the AuthForm React element gets called, which calls
+the handleSubmit method of the AuthForm component. In the handleSubmit method
+it sends a POST fetch request to the server with the forms inputs.
+
+The server takes the username and password from the fetch request, checks if
+both username and password were provided, throws an error if not, and if they
+are it querys the database to insert a new user into the users table and responds
+to the client with a 201 status and the new userId, username, and createdAt in
+JSON.
+
+When the client recieces the JSON response, it parses it, then updates the hash
+property of the location propery of the window object to redirect the page to
+the sign in form.
+
+
+USER CAN SIGN IN
+
+When a user provides an email and password on the sign in page and submits the
+form, the onClick prop of the AuthForm React element gets called, which calls the
+handleSubmit method of the Authform component. In the handleSubmit method,
+it sends a POST fetch request to the server with the form inputs
+
+when the server gets the request it checks if both username and password are
+provided, and throws an error if not, if they are it querys the database to select
+the userId and hashedPassword from the users table where the username matches the
+one from the request. If the user wasnt found, it throws an error, if it was, it
+checks the password from the request against the hashedPassword from the database,
+if they dont match it throws an error, and if they do it creates a token for the
+user, and responds to the client with the token, userId, and username in JSON.
+
+when the client recieves the response, it parses the JSON and calls the OnSignIn
+prop on the AuthForm React element, which takes the token from the response,
+and sets it to localStorage, and updates the user state of the App component
+to the user from the response.
+
+
+USER CAN STAY SIGNED IN (EVEN IF THEY REFRESH THE PAGE)
+
+If the user refreshes the page the app checks localStorage for a token, if there
+isnt one is updates the state to null and renders the sign in page, if there is
+it updates it to the token, and re-renders the page.
+
+
+USER CAN SIGN OUT
+
+When a user clicks the sign out button the app removes their token from localStorage,
+and updates the user property of the state to null, and re-renders the page
+to the sign in page.
