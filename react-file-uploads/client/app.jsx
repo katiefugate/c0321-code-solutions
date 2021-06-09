@@ -24,7 +24,8 @@ export default class App extends React.Component {
       body: formData
     };
     fetch('/api/uploads', init)
-      .then(res => console.log(res))
+      .then(res => res.json())
+      .then(body => console.log(body))
       .catch(err => console.error(err));
     event.target.reset();
 
