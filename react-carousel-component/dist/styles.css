@@ -1,0 +1,32 @@
+body {
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.left-arrow,
+.right-arrow {
+  align-self: center;
+  font-size: 3rem;
+}
+
+.left-arrow {
+  margin-right: 2rem;
+}
+
+.right-arrow {
+  margin-left: 2rem;
+}
+
+.dots {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.dot {
+  padding: 0 1rem;
+}
