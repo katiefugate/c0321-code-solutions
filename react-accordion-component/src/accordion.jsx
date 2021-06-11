@@ -4,29 +4,40 @@ class Accordion extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.state = { infoClass: 'info' };
+    this.topicsList = this.topicsList.bind(this);
+    this.state = { currentTopic: null };
   }
 
-  handleClick() {
-    if (event.target.className === 'info') {
-      this.setState({ infoClass: 'hidden' });
+  handleClick(event) {
+    if (event.target.id === this.state.currentTopic) {
+      this.setState({ currentTopic: null });
     } else {
-      this.setState({ infoClass: 'info' });
+      this.setState({ currentTopic: event.target.id });
     }
   }
 
-  render(props) {
-    const topics = this.props.topics.map(eachTopic => {
+  topicsList(topicList) {
+    let infoClass = 'hidden';
+    const topics = topicList.map(eachTopic => {
+      if (this.state.currentTopic === eachTopic.topic) {
+        infoClass = this.state.currentTopic;
+      } else {
+        infoClass = 'hidden';
+      }
       return (
         <div key={eachTopic.topic}>
-          <h1 onClick={this.handleClick} className="topic">{eachTopic.topic}</h1>
-          <p className={this.state.infoClass} id={eachTopic.topic}>{eachTopic.details}</p>
+          <h1 onClick={this.handleClick} id={eachTopic.topic} className='topic'>{eachTopic.topic}</h1>
+          <p className={`info ${infoClass}`}>{eachTopic.details}</p>
         </div>
       );
     });
+    return topics;
+  }
+
+  render(props) {
     return (
       <div>
-        {topics}
+        {this.topicsList(this.props.topics)}
       </div>
     );
   }
